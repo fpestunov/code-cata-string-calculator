@@ -21,4 +21,5 @@
 - тест для 1 числа, переписываем метод, работает.
 - тест для 2 чисел `it_finds_the_sum_of_two_number()`, тест не работает :(... переписываем метод, работает! и добавляем тест `it_finds_the_sum_of_any_amount_numbers()`.
 - делаем проверку на недопустимые числа `it_disallows_negative_numbers()`, переписываем метод, тест работает.
+- тест на `it_ignores_any_number_that_is_one_thousand_or_greater()` на большие числа, тест работает.
 
