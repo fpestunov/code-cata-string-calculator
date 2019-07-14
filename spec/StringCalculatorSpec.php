@@ -30,4 +30,9 @@ class StringCalculatorSpec extends ObjectBehavior
         $this->add('1,2,3,4,5')->shouldEqual(15);
     }
 
+    function it_disallows_negative_numbers()
+    {
+        $this->shouldThrow('InvalidArgumentException')->duringAdd('1,-2,3');
+    }
+
 }
