@@ -8,9 +8,11 @@ use Prophecy\Argument;
 
 class StringCalculatorSpec extends ObjectBehavior
 {
-    function it_is_initializable()
+    function it_translates_an_empty_string_into_zero()
     {
-        $this->shouldHaveType(StringCalculator::class);
+    	// shouldReturn, shouldBe, shouldEqual
+    	// for math better use Equal
+        $this->add('')->shouldEqual(0);
     }
-    
+
 }
