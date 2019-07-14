@@ -40,4 +40,9 @@ class StringCalculatorSpec extends ObjectBehavior
         $this->add('1,2,3,1001')->shouldEqual(6);
     }
 
+    function it_allows_for_new_line_delimeter()
+    {
+        $this->add('1,3\n5')->shouldEqual(9);
+    }
+
 }

@@ -4,7 +4,9 @@ class StringCalculator
 {
 	public function add($numbers)
 	{
-		$numbers = explode(',', $numbers);
+		// /,/ - просто запятая
+		// /\s*,\s*/ - запятая с пробелами
+		$numbers = preg_split('/\s*(,|\\\n)\s*/', $numbers);
 
 		$solution = 0;
 
