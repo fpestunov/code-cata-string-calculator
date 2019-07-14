@@ -2,8 +2,8 @@
 
 class StringCalculator
 {
-	public function add()
+	public function add($number)
 	{
-		return 0;
+		return (int) $number;
 	}
 }
