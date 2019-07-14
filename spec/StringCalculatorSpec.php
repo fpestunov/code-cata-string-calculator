@@ -5,6 +5,7 @@ namespace spec;
 use StringCalculator;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
+use InvalidArgumentException;
 
 class StringCalculatorSpec extends ObjectBehavior
 {
@@ -32,7 +33,7 @@ class StringCalculatorSpec extends ObjectBehavior
 
     function it_disallows_negative_numbers()
     {
-        $this->shouldThrow('InvalidArgumentException')->duringAdd('1,-2,3');
+        $this->shouldThrow(new InvalidArgumentException('Invalid number provided: -2'))->duringAdd('1,-2,3');
     }
 
     function it_ignores_any_number_that_is_one_thousand_or_greater()
