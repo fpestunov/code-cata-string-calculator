@@ -8,18 +8,20 @@ class StringCalculator
 	{
 		$numbers = $this->parseNumbers($numbers);
 
-		$solution = 0;
-
-		foreach ($numbers as $number) {
-
+		$numbers = array_map(function($number)
+		{
 			$this->guardAgainstInvalidNumber($number);
 
-			if ($number >= self::MAX_NUMBER_ALLOWED) continue;
+			if ($number >= self::MAX_NUMBER_ALLOWED)
+			{
+				return 0;
+			}
 
-			$solution += $number;
-		}
+			return $number;
 
-		return $solution;
+		}, $numbers);
+
+		return array_sum($numbers);
 	}
 
 	private function guardAgainstInvalidNumber($number)
