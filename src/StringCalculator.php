@@ -8,7 +8,7 @@ class StringCalculator
 	{
 		$numbers = $this->parseNumbers($numbers);
 
-		$numbers = array_map(function($number)
+		return array_sum(array_map(function($number)
 		{
 			$this->guardAgainstInvalidNumber($number);
 
@@ -19,9 +19,7 @@ class StringCalculator
 
 			return $number;
 
-		}, $numbers);
-
-		return array_sum($numbers);
+		}, $numbers));
 	}
 
 	private function guardAgainstInvalidNumber($number)
