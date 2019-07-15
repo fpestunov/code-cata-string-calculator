@@ -45,5 +45,4 @@ class StringCalculatorSpec extends ObjectBehavior
     {
         $this->add('1,3\n5')->shouldEqual(9);
     }
-
 }

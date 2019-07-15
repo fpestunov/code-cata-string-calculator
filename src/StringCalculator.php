@@ -2,6 +2,8 @@
 
 class StringCalculator
 {
+	const MAX_NUMBER_ALLOWED = 1000;
+
 	public function add($numbers)
 	{
 		$numbers = $this->parseNumbers($numbers);
@@ -12,8 +14,8 @@ class StringCalculator
 
 			$this->guardAgainstInvalidNumber($number);
 
-			if ($number >= 1000) continue;
-			
+			if ($number >= self::MAX_NUMBER_ALLOWED) continue;
+
 			$solution += $number;
 		}
 
